@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeScreen">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="15dp"
+        android:background="@color/purple_500"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_baseline_logout_24" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/ic_baseline_supervised_user_circle_24" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Hi, Welcome"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_alignStart="@+id/textView10"
+            android:text="Patient ID - "
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/textView9"
+            android:fontFamily="@font/poppins_medium"
+            android:text=""
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel"
+        android:layout_marginTop="0dp"
+        app:tabIndicatorColor="@color/design_default_color_primary"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/black" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+</RelativeLayout>
